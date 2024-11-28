@@ -8,7 +8,7 @@ const Hero = () => (
             transition ={{ duration: 0.8 }}
             className="text-4xl font-bold"
             >
-                Hi, I'm <span className="text-yellow-300">Chris</span>
+                Hi, I'm <span className="text-yellow-300">Not Chris</span>
             </motion.h1>
             <p className="mt-4 text-lg">A Web Developer | Software Engineer</p>
         <motion.botton 
