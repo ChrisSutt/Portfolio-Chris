@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import GlobalStyle from './styles/global'
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Project'
 import Contact from './components/Contact'
+import Navbar from './components/Navbar'
+import './index.css';
 import './App.css'
 
 function App() {
@@ -14,8 +13,8 @@ function App() {
   return (
     <>
 
-      {/* Global Styles */}
-      <GlobalStyle />
+      {/* Navbar Section */}
+      <Navbar />
 
       {/* Hero Section */}
       <Hero />

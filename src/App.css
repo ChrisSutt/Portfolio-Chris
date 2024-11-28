@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,3 +40,35 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1524561506982-601111bed7a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+} */
