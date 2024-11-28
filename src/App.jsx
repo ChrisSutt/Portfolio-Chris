@@ -4,6 +4,7 @@ import About from './components/About'
 import Projects from './components/Project'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import './index.css';
 import './App.css'
 
@@ -24,10 +25,15 @@ function App() {
 
       {/* Project Section */}
       <Projects />
-      {/* Contact Section */}
 
+      {/* Contact Section */}
       <Contact />
+
+      {/* Footer */}
+      <Footer />
+
       </>
+
   );
 }
 
