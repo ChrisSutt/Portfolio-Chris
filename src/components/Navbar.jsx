@@ -8,30 +8,42 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+    const handleCloseMenu = (id) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth'});
+        setIsOpen(false);
+    };
+
     return (
         <nav className="fixed top-0 right-0 z-50">
-            <button className="text-white text-3xl m-4 focus:outline-none" onClick={toggleMenu}>
+            {/* hamburger */}
+            <button className="text-white text-1xl m-4 focus:outline-none" onClick={toggleMenu}>
                 { isOpen ? <FaTimes /> : <FaBars />}
             </button>
+            {/* hamburger end */}
 
-            <div className={`absolute top-0 right -0 w-2/3 h-screen bg-blue-600 text-white transform ${ isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300`}
-            >
-            <ul className ="flex flex-col items center justify-center h-full space-y-6">
+            {/*Menu */}
+            {isOpen && (
+            <div className=" fixed inset-0 bg-gray-800 text-white flex flex-col justify-center items-center z-40">
+                <button className="absolute top-4 right-4 text-white text-2x1 focus:outline-none" onClick={toggleMenu}>
+                    <FaTimes />
+                </button>
+            <ul className ="space-y-6 text-center">
                 <li>
-                    <a href="#hero" className="text-lg font-semibold hover:underline" onClick="{toggleMenu}">Home</a>
+                    <a href="#hero" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('hero')}>Home</a>
                 </li>
                 <li>
-                    <a href="#about" className="text-lg font-semibold hover:underline" onClick="{toggleMenu}">About</a>
+                    <a href="#about" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('about')}>About</a>
                 </li>
                 <li>
-                    <a href="#projects" className="text-lg font-semibold hover:underline" onClick="{toggleMenu}">Projects</a>
+                    <a href="#projects" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('projects')}>Projects</a>
                 </li>
                 <li>
-                    <a href="#contact" className="text-lg font-semibold hover:underline" onClick="{toggleMenu}">Contact</a>
+                    <a href="#contact" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('contact')}>Contact</a>
                 </li>
 
                 </ul>
                 </div>
+                )}
         </nav>
     );
 };

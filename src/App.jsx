@@ -5,8 +5,9 @@ import Projects from './components/Project'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import './index.css';
+import './index.css'
 import './App.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
