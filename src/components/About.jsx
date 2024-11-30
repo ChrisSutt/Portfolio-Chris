@@ -18,18 +18,22 @@ const About = () => {
 
     return ( 
         <section id="about" className="bg-gray-100 text-gray-800 py-16 flex flex-col items-center" ref={ref}>
+        <motion.div
+            variants={leftVariants}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden' }
+            className="text-center max-w-2xl space-y-4 px-4"
+        ></motion.div>
+            <h2 className="text-4xl font-bold text-blue-600 mb-4">Who I Am</h2>
 
-            <h2 className="text-4xl font-bold text-blue-600 mb-8">About Me</h2>
-
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                 {/*Left Section */}
                 <motion.div
                     variants={leftVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden' }
-                    className="text-left space-y-4"
+                    className="text-center max-w-2xl space-y-4 px-4"
                     >
-                        <h3 className="text-2xl font-semibold">Who I Am</h3>
+                        <h3 className="text-2xl font-semibold"></h3>
                         <p>
                             Hi, I’m Chris – a passionate Web Developer and Software Engineer with a love for creating clean, intuitive, and dynamic user experiences. With a strong foundation in modern frameworks like React and a knack for integrating tools like Tailwind CSS, I specialize in building efficient and scalable web applications that merge functionality with aesthetic appeal.
                         </p>
@@ -45,14 +49,14 @@ const About = () => {
                         <p>
                         If you’re looking for a dedicated developer who’s not afraid to dive into the details and deliver high-quality results, let’s connect! 
                         </p>
-                    </motion.div>
+        </motion.div>
 
-                {/* Right Section */}
+    
                 <motion.div
                     variants={rightVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
-                    className="grid grid-cols-2 gap-6 text-center"
+                    className="grid grid-cols-2 md:grid-cols-6 gap6 mt-12"
                 >
                     {/* Skill Icons */}
                     <div className="flex flex-col items-center">
@@ -88,44 +92,11 @@ const About = () => {
                         <span className="mt-2 text-sm font-semibold">Figma</span>
                     </div>
                 </motion.div>
-            </div>
         </section>
     );
 };
 
 
-
-
-
-/*const About = () => (
-    <section id="about" className="bg-gray-100 py-16 text-center">
-        <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-blue-600">About Me</h2>
-            <p className="mt-4 text-gray-700">
-                I'm a web developer passionate about creating modern, responsive web applications. I specialize in JavaScript, React, Node.js and more.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-6">
-                <div className="flex flex-col items-center">
-                    <FaReact className="text-blue-500 text-4xl"/>
-                    <span className="mt-2 text-sm font-semibold">React</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <FaNodeJs className="text-blue-500 text-4xl"/>
-                    <span className="mt-2 text-sm font-semibold">NodeJs</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <FaHtml5 className="text-blue-500 text-4xl"/>
-                    <span className="mt-2 text-sm font-semibold">Html5</span>
-                </div>
-                <div className="flex flex-col items-center">
-                    <FaCss3Alt className="text-blue-500 text-4xl"/>
-                    <span className="mt-2 text-sm font-semibold">CSS3</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-);*/
 
 
 export default About;
