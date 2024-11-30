@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'; 
+import { motion, useInView } from 'framer-motion'; 
 import { FaReact, FaNodeJs, FaJsSquare, FaHtml5, FaCss3Alt, FaGitAlt, FaDatabase, FaFigma, } from 'react-icons/fa';
-
+import { useRef } from 'react';
 
 const About = () => {
     const leftVariants = {
@@ -13,8 +13,11 @@ const About = () => {
         visible: { x: 0, opacity: 1, transition: { duration: 0.8 } },
     };
 
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: true, margin: '-50px'});
+
     return ( 
-        <section id="about" className="bg-gray-100 text-gray-800 py-16 flex flex-col items-center">
+        <section id="about" className="bg-gray-100 text-gray-800 py-16 flex flex-col items-center" ref={ref}>
 
             <h2 className="text-4xl font-bold text-blue-600 mb-8">About Me</h2>
 
@@ -23,7 +26,7 @@ const About = () => {
                 <motion.div
                     variants={leftVariants}
                     initial="hidden"
-                    animate="visible"
+                    animate={inView ? 'visible' : 'hidden' }
                     className="text-left space-y-4"
                     >
                         <h3 className="text-2xl font-semibold">Who I Am</h3>
@@ -48,7 +51,7 @@ const About = () => {
                 <motion.div
                     variants={rightVariants}
                     initial="hidden"
-                    animate="visible"
+                    animate={inView ? 'visible' : 'hidden'}
                     className="grid grid-cols-2 gap-6 text-center"
                 >
                     {/* Skill Icons */}

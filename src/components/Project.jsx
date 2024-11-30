@@ -12,7 +12,7 @@ const Projects = () => (
                     <div key={index} className="border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition">
                 <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
                 <p className="text-gray-600 mt-2">{project.desc}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" classname="mt-4 inline-block text-blue-500 font-semibold hover:underline">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-blue-500 font-semibold hover:underline">
                     View Project
                 </a>
             </div>

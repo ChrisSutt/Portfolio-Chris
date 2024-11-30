@@ -5,8 +5,8 @@ const Contact = () => (
             <form className="mt-8 max-w-lg mx-auto space-y-4">
                 <input type="text" placeholder="Name" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"/>
                 <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"/>
-                <textare placeholder="Message" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200" rows="5">      
-                </textare>
+                <textarea placeholder="Message" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200" rows="5">      
+                </textarea>
                 <button type="submit" className="w-full px-4 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-600">
                     Send
                 </button>
