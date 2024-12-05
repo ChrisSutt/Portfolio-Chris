@@ -11,20 +11,20 @@
 }
 
 .b-orange {
-    color: #ff6f00;
+    color: #FFD8B4;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .b-orange:hover {
-    color: #d35400;
+    color: #FFD8B4;
 }
 
 .section-title {
     position: relative;
     font-size: 40px;
     text-align: center;
-    color: #ff6f00;
+    color: #FFD8B4;
     font-weight: bold;
 }
 
@@ -34,7 +34,7 @@
     position: absolute;
     height: 3px;
     width: 65px;
-    background-color: #ff6f00;
+    background-color: #FFD8B4;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -43,4 +43,32 @@
 
 .section-title::after {
     bottom: 0;
+}
+
+.icons-container {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+@media (max-width: 1024px) {
+    .icon-container {
+        display: block;
+    }
+
+    .icon-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 769px) {
+    .icon-container {
+        display: block;
+    }
+
+    .icon-item {
+        display: flex;
+        align-items:center;
+        margin-bottom: 10px;
+    }
 }

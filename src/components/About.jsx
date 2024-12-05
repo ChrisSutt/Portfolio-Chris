@@ -30,14 +30,18 @@ const About = () => {
         <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-norepeat"
         >
-            <div className="absolute inset-0 bg-black opacity-30"></div>
         </div>
-
+        <motion.h2
+            variants={rightVariants}
+            initial="hidden"
+            animate="visible"
+            className="section-title mb-8"
+            >About Me</motion.h2>
         <motion.div
     variants={leftVariants}
     initial="hidden"
     animate={inView ? 'visible' : 'hidden'}
-    className="flex flex-col md:flex-row items-start bg-dark-gray text-white w-9/12 mx-auto p-8 md:space-x-8 rounded-lg shadow-lg"
+    className="flex flex-col md:flex-row items-start text-white  mx-auto p-8 md:space-x-8 rounded-lg shadow-lg"
 >
     {/* Left Section */}
     <div className="flex-1 space-y-12">
@@ -75,14 +79,14 @@ const About = () => {
 </motion.div>
     </section>
     
-    <section id="skills" className="relative ">
+    <section id="skills" className="relative mt-20">
 
         {/* Skills */}
         <motion.h2
             variants={rightVariants}
             initial="hidden"
             animate="visible"
-            className="section-title mb-8 mt-20"
+            className="section-title mb-8"
             >Skills</motion.h2>
 
         <motion.div
@@ -101,34 +105,34 @@ const About = () => {
                         className="w-20 h-20 mb-4"
                     />
                     <h3 className="text-2xl font-bold text-blue-400 mb-2">Frontend</h3>
-                    <p className="mb-4 text-center">
+                    <p className="mb-4 text-center p-8">
                         Specializing in responsive design, React Development, and crafting engaging user interfaces.
                     </p>
-                    <div className="flex flex-col space-y-2">
-                    <h3 className="text-1xl font-bold text-blue-400 mb-2 text-center">Tools</h3>
-                        <div className="flex items-center">
+                    <h4 className="text-2xl font-bold text-blue-400 mb-10">Tools</h4>
+                    <div className="icon-container flex flex-wrap justify-center gap-8">
+                        <div className="flex items-center icon-item">
                             <FaReact className="text-blue-400 text-5xl mr-2" />
-                            <span className="text-xl font-semibold text-gray-700">React</span>
+                            <span className="text-xl font-semibold">React</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center icon-item">
                             <FaJsSquare className="text-blue-400 text-5xl mr-2" />
-                            <span className="text-xl font-semibold text-gray-700">JavaScript</span>
+                            <span className="text-xl font-semibold">JavaScript</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center icon-item">
                             <FaHtml5 className="text-blue-400 text-5xl mr-2" />
-                            <span className="text-xl font-semibold text-gray-700">Html5</span>
+                            <span className="text-xl font-semibold">Html5</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center icon-item">
                             <FaCss3Alt className="text-blue-400 text-5xl mr-2" />
-                            <span className="text-xl font-semibold text-gray-700">CSS</span>
+                            <span className="text-xl font-semibold">CSS</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center icon-item">
                             <FaGitAlt className="text-blue-400 text-5xl mr-2" />
-                            <span className="text-xl font-semibold text-gray-700">Github</span>
+                            <span className="text-xl font-semibold">Github</span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center icon-item">
                             <FaDatabase className="text-blue-500 text-5xl mr-2 " />
-                            <span className="text-xl font-semibold text-gray-700">jQuery</span>
+                            <span className="text-xl font-semibold">jQuery</span>
 
                         </div>
                     </div>
@@ -142,30 +146,31 @@ const About = () => {
                         className="w-20 h-20 mb-4"
                     />
                     <h3 className="text-2xl font-bold text-green-600 mb-2">Backend</h3>
-                    <p className="mb-4 text-center">
+                    <p className="mb-4 text-center p-8">
                     Focused on building scalable server-side applications and managing databases efficiently.
                     </p>
-                    <div className="flex flex-col space-y-2">
-                    <h3 className="text-1xl font-bold text-green-600 mb-2 text-center">Tools</h3>
-                    <div className="flex items-center">
+                    <h4 className="text-2xl font-bold text-green-500 mb-10">Tools</h4>
+                    <div className="icon-container flex flex-wrap justify-center gap-8">
+    
+                    <div className="flex items-center icon-item">
                         <FaNodeJs className="text-green-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Node</span>
+                        <span className="text-xl font-semibold">Node</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaDatabase className="text-green-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">MySql</span>
+                        <span className="text-xl font-semibold">MySql</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaDatabase className="text-green-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">NoSql</span>
+                        <span className="text-xl font-semibold">NoSql</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaDatabase className="text-green-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">MongoDB</span>
+                        <span className="text-xl font-semibold">MongoDB</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaDatabase className="text-green-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Express.js</span>
+                        <span className="text-xl font-semibold">Express.js</span>
                     </div>
                 </div>
             </div>
@@ -177,30 +182,30 @@ const About = () => {
                         className="w-20 h-20 mb-4"
                     />
                     <h3 className="text-2xl font-bold text-purple-600 mb-2">UI/UX</h3>
-                    <p className="mb-4 text-center">
+                    <p className="mb-4 text-center p-8">
                     Dedicated to designing intuitive and engaging user experiences and prototypes.
                     </p>
-                    <div className="flex flex-col space-y-2">
-                    <h3 className="text-1xl font-bold text-purple-600 mb-2 text-center">Tools</h3>
-                    <div className="flex items-center">
+                    <h4 className="text-2xl font-bold text-purple-500 mb-10">Tools</h4>
+                    <div className="icon-container flex flex-wrap justify-center gap-8"> 
+                    <div className="flex items-center icon-item">
                         <FaFigma className="text-purple-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Figma</span>
+                        <span className="text-xl font-semibold">Figma</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaDesktop className="text-purple-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Interfaces</span>
+                        <span className="text-xl font-semibold">Interfaces</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaBug className="text-purple-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Debugging</span>
+                        <span className="text-xl font-semibold">Debugging</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaTasks className="text-purple-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Project Dev</span>
+                        <span className="text-xl font-semibold">Project Dev</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center icon-item">
                         <FaExchangeAlt className="text-purple-500 text-5xl mr-2" />
-                        <span className="text-xl font-semibold text-gray-700">Rest APIs</span>
+                        <span className="text-xl font-semibold">Rest APIs</span>
                     </div>
                 </div>
             </div>
