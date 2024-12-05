@@ -1,0 +1,46 @@
+.bg-light-gray {
+    background-color: #333333;
+}
+
+.bg-dark-gray {
+    background-color: #1a1a1a
+}
+
+.bg-lighter-gray {
+    background-color: #262626
+}
+
+.b-orange {
+    color: #ff6f00;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.b-orange:hover {
+    color: #d35400;
+}
+
+.section-title {
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    color: #ff6f00;
+    font-weight: bold;
+}
+
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 65px;
+    background-color: #ff6f00;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.section-title::after {
+    bottom: 0;
+}

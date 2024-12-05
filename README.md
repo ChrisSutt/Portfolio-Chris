@@ -6,3 +6,16 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+Icons - <a href="https://www.flaticon.com/free-icons/web-layout" title="web layout icons">Web layout icons created by Meiliastudio - Flaticon</a>
+
+
+
+<a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Iconsmeet - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/ux" title="ux icons">Ux icons created by rukanicon - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/backend" title="backend icons">Backend icons created by Grafixpoint - Flaticon</a>
+

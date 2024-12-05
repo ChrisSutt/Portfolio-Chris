@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import '../styles/hero.css'
-
+import React from 'react';
+import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt  } from "react-icons/fa";
 
 const Hero = () => {
     const containerVariants = {
@@ -20,7 +21,7 @@ const Hero = () => {
     return (
         <motion.section 
             id="hero" 
-            className="bg-animated text-white flex flex-col items-center justify-center h-screen"
+            className="bg-dark-gray text-white flex flex-col items-center justify-center h-screen"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -30,7 +31,7 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-4xl font-bold text-center"
             >
-                Hi, I'm <span className="text-yellow-300">Chris</span>
+                Hi, I'm <span className="b-orange">Chris</span>
             </motion.h1>
 
             <motion.p
@@ -39,17 +40,6 @@ const Hero = () => {
             >
                 A Web Developer | Software Engineer
             </motion.p>
-
-            {/* <motion.button
-                variants={itemVariants}
-                whileHover= {{ scale: 1.1 }}
-                whileTap= {{ scale: 0.9 }}
-                className="mt-10 px-6 py-3 bg-yellow-400 text-black font-semibold rounded shadow hover:bg-yellow-500 border"
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth'})
-            }
-            >
-                Contact Me
-            </motion.button> */}
         </motion.section>
     );
 };

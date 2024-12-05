@@ -5,8 +5,17 @@
   }
   
   .bg-animated {
-    background: linear-gradient(270deg, #00c6ff, #0072ff, #00d2ff);
+    background: linear-gradient(270deg, #2d2d2d,#1a1a1a);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
   }
   
+  .b-orange {
+    color: #ff6f00;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.b-orange:hover {
+    color: #d35400;
+}
