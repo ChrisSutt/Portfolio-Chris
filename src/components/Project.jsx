@@ -1,5 +1,11 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react';
+import Project1 from '../../assets/images/Project1.png'
+import Project2 from '../../assets/images/Project2.png'
+import Project3 from '../../assets/images/Project3.png'
+import Project4 from '../../assets/images/Project4.png'
+import Project5 from '../../assets/images/Project5.png'
+import Project6 from '../../assets/images/Project6.png'
 
 const Projects = () => {
     const ref = useRef(null);
@@ -16,19 +22,22 @@ const Projects = () => {
     };
 
     const projects = [
-        { title: "Aurora Lighting Solutions", link: "https://auroralightingsolutions.com", desc: "shopfiy ecommerce store" },
-        { title: "Project Management Tool", link: "#", desc: "A tool to manage tasks effectively"},
-        { title: "Project 3", link: "#", desc: "My portfolio"},
-        { title: "Project 4", link: "#", desc: "a personal blog site"},
-        { title: "Project 5", link: "#", desc: "a real-time chat application"},
-        { title: "Project 6", link: "#", desc: "a fitness tracking mobile app"},
+        { title: "Aurora Lighting Solutions", link: "https://auroralightingsolutions.com", desc: "shopfiy ecommerce store", image: Project1 },
+        { title: "Project Management Tool", link: "#", desc: "A tool to manage tasks effectively", image: Project2},
+        { title: "Project 3", link: "#", desc: "My portfolio", image: Project3},
+        { title: "Project 4", link: "#", desc: "a personal blog site", image: Project4},
+        { title: "Project 5", link: "#", desc: "a real-time chat application", image: Project5},
+        { title: "My Portfolio", link: "https://chris-sutton.ca", desc: "a fitness tracking mobile app", image: Project6},
     ];
 
     return (
-        <section id="projects" className="bg-gray-50 text-gray-800 py-16 px-6 lg:px-16">
+    
+        <section id="projects" className="bg-gray-50 text-gray-800 py-16">
+                    <div className="bg-animated h-[300px]">
+                    </div>
+        <div className="-mt-[225px] mx-auto relative ">
             <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-blue-600 mb-4">My Projects</h2>
-                <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto"></div>
+            <h2 className="text-4xl font-bold text-gray-600 mb-4">My Projects</h2>
             </div>
 
             <div className="container mx-auto grid gird-cols-1 sm:grid-cols-2 lg-grid-cols-3 gap-12" ref={ref} >
@@ -40,37 +49,31 @@ const Projects = () => {
                     animate={ inView ? 'visible' : 'hidden' }
                     className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-start hover:shadow-2xl transition-shadow duration-300"
                     >
+                        {/* top Half of card */}
+                        <div
+                            className="h-48"
+                            style={{
+                                backgroundImage: `url(${project.image})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                            }}
+                            ></div>
+                        {/* Bottom half of image*/}
+                    <div className="p-6 flex flex-col items-start">
                         <h3 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h3>
                         <p className="text-gray-600 mb-4">{project.description}</p>
                         <a href={project.link} 
                            className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition-colors">
                             View Project
                         </a>
+                        </div>
                     </motion.div>
                 ))}
             </div>
+            </div>
         </section>
+
     );
 };
-
-/* const Projects = () => (
-    <section id="projects" className="bg-white py-16">
-        <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-blue-600">Projects</h2>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projects.map((project, index) => (
-                    <div key={index} className="border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition">
-                <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.desc}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-blue-500 font-semibold hover:underline">
-                    View Project
-                </a>
-            </div>
-                ))}
-        </div>
-    </div>
-
-    </section>
-); */
 
 export default Projects;

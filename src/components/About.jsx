@@ -17,6 +17,7 @@ const About = () => {
     const inView = useInView(ref, { once: true, margin: '-50px'});
 
     return ( 
+        <>
         <section id="about" className="bg-gray-100 text-gray-800 py-16 flex flex-col items-center" ref={ref}>
         <motion.div
             variants={leftVariants}
@@ -28,7 +29,7 @@ const About = () => {
 
             
 
-                {/*Left Section */}
+                {/*AboutMe */}
                 <motion.div
                     variants={leftVariants}
                     initial="hidden"
@@ -52,16 +53,22 @@ const About = () => {
                         If you’re looking for a dedicated developer who’s not afraid to dive into the details and deliver high-quality results, let’s connect! 
                         </p>
         </motion.div>
-
-    <div className="relative w-full py-16 bg-purple600 rounded-t-xl">
+    </section>
+    
+    <section id="skills" className="relative ">
+        <div className="bg-animated h-[300px]">
+        </div>
+        {/* Skills */}
+        <div className="-mt-[225px] mx-auto relative ">
         <motion.div
         
             variants={rightVariants}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
-            className="grid grid-cols-1 md:grid-cols-3 gap-1 mt-12 w-3/4 mx-auto">
+            className="grid grid-cols-1 md:grid-cols-3 gap-x-1 mt-12 w-11/12 mx-auto">
                 {/*front end */}
-                <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                <div className="bg-white p-11 rounded-lg shadow-md flex flex-col items-center ">
+                   
                     <img
                         src="https://fakeimg.pl/20x20"
                         alt="Frontend Icon"
@@ -93,15 +100,16 @@ const About = () => {
                             <FaGitAlt className="text-blue-500 text-5xl mr-2" />
                             <span className="text-xl font-semibold text-gray-700">Github</span>
                         </div>
-                                                <div className="flex items-center">
-                            <FaDatabase className="text-blue-500 text-5xl mr-2" />
+                        <div className="flex items-center">
+                            <FaDatabase className="text-blue-500 text-5xl mr-2 " />
                             <span className="text-xl font-semibold text-gray-700">jQuery</span>
+
                         </div>
                     </div>
                 </div>
 
                 {/* backend */}
-                <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                <div className="bg-white p-11 rounded-lg shadow-md flex flex-col items-center">
                 <img
                         src="https://fakeimg.pl/20x20"
                         alt="Frontend Icon"
@@ -136,7 +144,7 @@ const About = () => {
                 </div>
             </div>
 
-                <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+                <div className="bg-white p-11 rounded-lg shadow-md flex flex-col items-center">
                 <img
                         src="https://fakeimg.pl/20x20"
                         alt="Frontend Icon"
@@ -171,12 +179,12 @@ const About = () => {
                 </div>
             </div>
             </motion.div>
-        </div>
+            </div>
+
         </section>
+        </>
     );
 };
-
-
 
 
 export default About;

@@ -30,7 +30,7 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-4xl font-bold text-center"
             >
-                Hi, I'm <span className="text-yellow-300">Chirs</span>
+                Hi, I'm <span className="text-yellow-300">Chris</span>
             </motion.h1>
 
             <motion.p
@@ -40,7 +40,7 @@ const Hero = () => {
                 A Web Developer | Software Engineer
             </motion.p>
 
-            <motion.button
+            {/* <motion.button
                 variants={itemVariants}
                 whileHover= {{ scale: 1.1 }}
                 whileTap= {{ scale: 0.9 }}
@@ -49,7 +49,7 @@ const Hero = () => {
             }
             >
                 Contact Me
-            </motion.button>
+            </motion.button> */}
         </motion.section>
     );
 };

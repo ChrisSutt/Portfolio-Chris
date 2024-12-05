@@ -35,11 +35,15 @@ const Navbar = () => {
                     <a href="#about" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('about')}>About</a>
                 </li>
                 <li>
+                    <a href="#skills" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('contact')}>Skills</a>
+                </li>
+                <li>
                     <a href="#projects" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('projects')}>Projects</a>
                 </li>
                 <li>
                     <a href="#contact" className="text-lg font-semibold hover:underline" onClick={() => handleCloseMenu('contact')}>Contact</a>
                 </li>
+
 
                 </ul>
                 </div>
