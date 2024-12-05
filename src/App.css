@@ -10,6 +10,10 @@
     background-color: #262626
 }
 
+.bg-light-orange {
+    background-color: #FFD8B4;
+}
+
 .b-orange {
     color: #FFD8B4;
     font-weight: bold;

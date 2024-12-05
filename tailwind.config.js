@@ -6,7 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        softPeach: '#FFD8B4',
+      },
+      fontFamily: {
       sans: ['Quicksand', 'sans-serif'],
+      },
     },
   },
   plugins: [],

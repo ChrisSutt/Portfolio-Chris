@@ -41,13 +41,13 @@ const About = () => {
     variants={leftVariants}
     initial="hidden"
     animate={inView ? 'visible' : 'hidden'}
-    className="flex flex-col md:flex-row items-start text-white  mx-auto p-8 md:space-x-8 rounded-lg shadow-lg"
+    className="flex flex-col md:flex-row items-start text-white  mx-auto p-8 md:space-x-8 "
 >
     {/* Left Section */}
     <div className="flex-1 space-y-12">
     {/* Who I Am Section */}
     <div className="border-l-4 border-orange pl-6">
-        <h3 className="text-3xl font-bold b-orange mb-4 S">Who I Am</h3>
+        <h3 className="text-3xl font-bold text-softPeach mb-4">Who I Am</h3>
         <p className="text-white leading-relaxed">
             Hi, I’m Chris – a passionate Web Developer and Software Engineer with a love for creating clean, intuitive, and dynamic user experiences. With a strong foundation in modern frameworks like React and a knack for integrating tools like Tailwind CSS, I specialize in building efficient and scalable web applications that merge functionality with aesthetic appeal.
         </p>

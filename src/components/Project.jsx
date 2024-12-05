@@ -37,7 +37,7 @@ const Projects = () => {
                     </div>
         <div className="-mt-[225px] mx-auto relative ">
             <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold b-orange mb-4">My Projects</h2>
+            <h2 className="section-title  mb-4">My Projects</h2>
             </div>
 
             <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg-grid-cols-3 gap-12 px-4" ref={ref} >
